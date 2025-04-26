@@ -28,8 +28,10 @@ const Login = () => {
             // window.location.href = "https://www.google.com" 
             // Consider navigating to a success page or dashboard instead
             // navigate('/dashboard'); 
+            let username = form.username;
+            let username_space = username.replace(/ /g, "-"); // Replace spaces with underscores
             alert("Login exitoso. Redirigiendo (ejemplo)."); // Provide user feedback before redirect
-            window.location.href = `https://www.mrarrieta.com/${form.username}`; // Example external redirect
+            window.location.href = `https://www.mrarrieta.com/${username_space}`; // Example external redirect
         }catch(err){
             console.error('❌ Error en el login:', err)
             let errorMessage = "Error desconocido en el login";
